@@ -23,6 +23,9 @@ import com.vinay.lotteryapp.data.remote.model.Ticket
 import com.vinay.lotteryapp.ui.viewmodel.TicketViewModel
 
 
+/**
+ * Ticket list view
+ */
 @Composable
 fun TicketListView(tickets:ArrayList<Ticket>,viewModel: TicketViewModel) {
     LazyColumn{
@@ -32,6 +35,9 @@ fun TicketListView(tickets:ArrayList<Ticket>,viewModel: TicketViewModel) {
     }
 }
 
+/**
+ * Ticket list item desing
+ */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TicketItem(ticket: Ticket,viewModel: TicketViewModel) {
@@ -49,6 +55,10 @@ fun TicketItem(ticket: Ticket,viewModel: TicketViewModel) {
     }
 }
 
+
+/**
+ * This view displays total amount when user navigate from onclick ticket item
+ */
 @Composable
 fun TicketDetailView(amount:Int?) {
    Surface {

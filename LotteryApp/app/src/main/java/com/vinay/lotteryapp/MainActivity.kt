@@ -48,6 +48,10 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+
+        /**
+         * collect ticket Amount from view model and navigate to the screen
+         */
         lifecycleScope.launch{
             ticketViewModel.ticketAmount.collect{
                 if(it!=-1) {
